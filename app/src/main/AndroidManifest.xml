@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.samsung.picnic12"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21" />
+
+    <!-- This tag indicates that this application requires ARCore.  This results in the application
+         only being visible in the Google Play Store on devices that support ARCore. -->
+    <uses-feature android:name="android.hardware.camera.ar" android:required="true"/>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
+
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front.autofocus"  android:required="false"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+//아무 주석이나 넣어봅시다
+    <supports-screens android:resizeable="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:anyDensity="true" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:debuggable="true"
+        tools:ignore="HardcodedDebugMode"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar.">
+        <activity android:name=".loginactivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".signupactivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Dustactivity"></activity>
+        <activity android:name=".Chat1"></activity>
+        <activity android:name=".NewRoom"></activity>
+        <activity android:name=".NewBoard"></activity>
+        <activity android:name=".Board"></activity>
+        <activity android:name=".EditBoard"></activity>
+        <activity android:name=".Myprofile"></activity>
+        <activity android:name=".facecamera"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation"/>
+        <activity android:name=".ImageClick"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+        <activity android:name=".Test"></activity>
+
+        <activity android:name=".ConnectActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="appr.tc"/>
+                <data android:scheme="http" android:host="appr.tc"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="SettingsActivity"
+            android:label="@string/settings_name">
+        </activity>
+
+        <activity android:name="CallActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="fullUser"
+            android:configChanges="orientation|smallestScreenSize|screenSize|screenLayout"
+            android:theme="@style/CallActivityTheme">
+
+
+        </activity>
+
+        <activity android:name=".ConnectActivity2"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="appr.tc"/>
+                <data android:scheme="http" android:host="appr.tc"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DrawAR"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="locked"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+        <!-- This tag indicates that this application requires ARCore.  This results in the Google Play
+     Store downloading and installing ARCore along with the application. -->
+        <meta-data android:name="com.google.ar.core" android:value="required" />
+    </application>
+
+    </manifest>

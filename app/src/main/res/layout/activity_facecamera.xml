@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".facecamera" >
+    <org.opencv.android.JavaCameraView
+        android:layout_width="770dp"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_surface_view" />
+    <FrameLayout
+        android:background="@drawable/black"
+        android:layout_width="80dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/shutter"/>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#00ff0000"
+            android:layout_gravity="center_vertical" />
+    </FrameLayout>
+
+</LinearLayout>
