@@ -1,7 +1,16 @@
 # PicnicMore
 PicnicMore
 
-2018년 5월~8월(3개월)동안 작성한 코드입니다.
+2018년 5월~8월(3개월)동안 혼자 기획 및 작성한 코드입니다.
+
+처음으로 진행한 안드로이드 프로젝트로 코드가 복잡하고 정리되어있지 않습니다.
+
+Fragment1 : 미세먼지(공공데이터포털 api) 
+Fragment2 : 날씨(공공데이터포털 api)
+Fragment3 : 교통현황(네이버 맵 api)
+Fragment4 : 채팅 & 영상통화 (소켓통신 & TedBottomPicker라이브러리 & WebRTC)
+Fragment5 : 게시판
+그외 : 프로필 사진(OpenCV),Drawing AR(AR Core)....
 
 유튜브 영상 및 실제 서비스를 보면서 혼자서 기획하고 만들어본 프로젝트입니다.
 
